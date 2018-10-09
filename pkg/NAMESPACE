@@ -1,0 +1,9 @@
+
+importFrom(stats, integrate, uniroot)
+
+#
+#shiny and DT are not required here since they are not in "Depends" in the DESCRIPTION file...
+#
+#import(shiny)
+
+exportPattern("^[[:alpha:]]+")
