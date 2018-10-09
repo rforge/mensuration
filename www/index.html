@@ -134,9 +134,24 @@
 
 <Rcode>install.packages("Mensuration", repos="http://R-Forge.R-project.org")</Rcode><br><br>
 
-Currently, the <Rpkg>Mensuration</Rpkg> package is 'stand-alone,' and does not rely on any
-other R packages.
+Currently, the <Rpkg>Mensuration</Rpkg> package relies on the R Shiny package.
 </p>
+
+<p> In order to use the Shiny applications, the <Rpkg>Mensuration</Rpkg> package requires
+    that the following package be installed prior to use. It is best to install the most
+    recent version from <acronym>CRAN</acronym> as&hellip;<br><br>
+
+  <Rcode>install.packages("shiny")</Rcode><br><br>
+
+    An optional package that will present tables in a more useable manner (see examples
+    below) is the <a href="https://rstudio.github.io/DT/"><Rpkg>DT</Rpkg> package</a>,
+    which supports JavaScript "DataTables"; this package is recommend and can be installed
+    with&hellip;<br><br>
+
+  <Rcode>install.packages("DT")</Rcode><br><br>
+
+</p>
+
 
 
 
@@ -151,10 +166,10 @@ versions if desired&hellip;
 
 <ol>
 
-  <li><!--<a href="https://r-forge.r-project.org/scm/viewvc.php/*checkout*/pkg/inst/doc/Mensuration.pdf?root=mensuration">-->
+  <li><a href="https://r-forge.r-project.org/scm/viewvc.php/*checkout*/pkg/inst/doc/Mensuration.pdf?root=mensuration">
 	  <em> The help file for the <Rclass>Mensuration</Rclass> Package </em></a><br><br>
 
-  <li><!--<a href="https://r-forge.r-project.org/scm/viewvc.php/*checkout*/pkg/inst/doc/Mensuration.pdf?root=mensuration">-->
+  <li><!--<a href="https://r-forge.r-project.org/scm/viewvc.php/*checkout*/pkg/inst/doc/MensurationUsersGuide.pdf?root=mensuration">-->
 	  Available soon&hellip;
 	  <em> The R <Rclass>Mensuration</Rclass> Package User's Guide </em></a><br><br>
 
@@ -186,13 +201,14 @@ The following paper details the development of the Chapman-Richards distribution
 Several examples of the supporting functions are shown in the package vignette cited
 above. Because of the interavtive nature of Shiny applications, only a screen shot of each
 application is shown here. Again, a more detailed narrative on each application is found
-in the package vignette.
+in the package vignette. The best course of action is to simply install the package and
+its dependency (Shiny) and give it a try.
 </p>
 
 
 <h3><Rcode>qDistnShiny</Rcode></h3>
 
-<p> The following is a snapshot of the interface that allows one to invision
+<p> The following is a snapshot of the interface that allows one to explore
   different <em>q</em> distibutions using the sliders to the left&hellip;
 </p>
 
@@ -207,9 +223,10 @@ in the package vignette.
 
 <h3><Rcode>crDistnShiny</Rcode></h3>
 
-<p> Similarly to the above, the following is a snapshot of the interface that allows one to invision
-  different Chapman-Richards distibutions using the sliders to the left; the following
-  shows a "rotated-sigmoid" distribution that is the default&hellip;
+<p> Similarly to the above, the following is a snapshot of the interface that allows one
+  to explore different Chapman-Richards distibutions using the sliders to the left; the
+  following shows a "rotated-sigmoid" distribution accompanied by the basal area-size
+  distribution (BASD); which are the defaults at creation time&hellip;
 </p>
 
 <!-- crDistnShiny -->
@@ -220,7 +237,17 @@ in the package vignette.
 
 <p> Note that the sliders are used to set the parameters of the Chapman-Richards growth
   equations (eta, m, and gamma) and the two other vital rates of the distribution:
-  Recruitment and Mmortality. 
+  "Recruitment" and "Mortality rate." More information on these parameter values and how
+  they affect the growth and resulting distributional shapes is given in the vignette and
+  the paper cited above. Also note that the figure shows all trees down to the very
+  smallest in the first class (in order to capture most of the numbers density in that
+  class near zero), which we are told is wider than the nominal width; this option may be
+  selected by calling the routine using: <Rcode>crDistnShiny(d0 = 0.001, includeTiny =
+  TRUE)</Rcode> (see the help page for more information on these and other arguments). We
+  are also told that the largest class is different from the nominal size, this results
+  because the Chapman-Richards growth model has a maximum size limit, which is inherited
+  by the distribution. The quadratic mean stand diameter is shown on both distributions
+  with the small red tick mark.
 </p>
 
 <p>The above is accompanied by the basal area-size distribution on the right of the
@@ -247,6 +274,25 @@ in the package vignette.
 </div>
 
 
+
+<h3> Summary </h3>
+
+<p> There are a number of other options for both of the Shiny applications illustrated
+  above---these are detailed in the package help pages, as are the other routines
+  available in the package. Both of the Shiny applications allow the user to explore the
+  results on distributional shape by changing the parameters for the respective
+  distribitions interactively in real time. The <em>q</em> distribution will always have a
+  negative exponential shape, but one can vary the diminution coefficient as well as the
+  other parameters to see what affect these changes have on the final stand structure. The
+  Chapman-Richards distribution is more complicated, and has many more shapes that can be
+  attained by reasonable changes to the vital rate parameters.
+</p>
+
+
+
+
+
+  
 
 
 </div> <!-- #content -->
