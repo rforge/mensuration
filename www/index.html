@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+
+<head>
+<style type="text/css">
+.knitr .inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.rimage .left {
+  text-align: left;
+}
+.rimage .right {
+  text-align: right;
+}
+.rimage .center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+  <meta name="description" content="Mensuration: Wavelet Functionality for Package sampSurf" /> 
+
+  <link rel="stylesheet" href="./css/Mensuration.css" type="text/css">
+  <link rel="stylesheet" href="./css/navList.css" type="text/css">
+
+  <title>The Mensuration Package</title>
+</head>
+
+<body id='container'>
+
+<!-- R-Forge Logo -->
+<div id='RFlogo'>
+<a href="https://r-forge.r-project.org/projects/mensuration/">
+<img src="./images/logo.png" width="100%"/> </a>
+</div>
+
+
+<div id='content'>
+
+<!--
+<h1><a href="https://r-forge.r-project.org/projects/sswavelets/">
+ The ssWavelets Package: Wavelet Functionality for Package sampSurf  </a></h1> -->
+
+<h1>The Mensuration Package: Simple Routines for Forest Mensuration  </h1>
+
+<!-- navigation menu -->
+<ul id="navlist">
+  <li><a href="#Overview">Overview</a></li>
+  <li><a href="#Installation">Installation</a></li>
+  <li><a href="#Examples">Examples</a></li>
+</ul><br><br>
+
+
+
+
+
+<!-- ============================================================================================== -->
+<h2><a name="Overview"></a>Overview of the Mensuration package</h2>
+
+<p> The <Rpkg>Mensuration</Rpkg> package is a small package of routines that might be
+  helpful for some projects related to forest mensuration. The package as it stands is
+  very incomplete and currently revolves around
+  two <a href="https://shiny.rstudio.com/"><Rpkg>Shiny</Rpkg></a> applications that run in
+  the user's web browser. These allow the interactive exploration of so-called <em>q</em>
+  distributions and the more flexible Chapman-Richards distribution. A few "helper"
+  routines are potentially useful in their own right.
+</p>
+
+<p> Details of package use are found in the package vignette: <Rclass>The R Mensuration
+	Package User's Guide</Rclass>, while the help system is detailed in the normal package
+	vignette. Information on installation and a simple example are found in the following
+	sections. Please refer to the vignettes for more details.
+</p>	  
+
+
+
+
+
+
+<!-- ============================================================================================== -->
+<h2><a name="Installation"></a>Mensuration package installation</h2>
+
+
+<p> <Rpkg>Mensuration</Rpkg> is available only on R-Forge. On the project pages, you will
+    note that you can install the package directly from R-Forge using&hellip; <br><br>
+
+<Rcode>install.packages("Mensuration", repos="http://R-Forge.R-project.org")</Rcode><br><br>
+
+Currently, the <Rpkg>Mensuration</Rpkg> package is 'stand-alone,' and does not rely on any
+other R packages.
+</p>
+
+
+
+<h3><Rpkg>Mensuration</Rpkg> package vignette</h3>
+
+<p>
+As noted above, there is one extra package vignette (aside from the default help vignette)
+distributed with the package itself. Both can also be downloaded here from the R-Forge
+versions if desired&hellip;
+</p>
+
+
+<ol>
+
+  <li><!--<a href="https://r-forge.r-project.org/scm/viewvc.php/*checkout*/pkg/inst/doc/Mensuration.pdf?root=mensuration">-->
+	  <em> The help file for the <Rclass>Mensuration</Rclass> Package </em></a><br><br>
+
+  <li><!--<a href="https://r-forge.r-project.org/scm/viewvc.php/*checkout*/pkg/inst/doc/Mensuration.pdf?root=mensuration">-->
+	  Available soon&hellip;
+	  <em> The R <Rclass>Mensuration</Rclass> Package User's Guide </em></a><br><br>
+
+</ol>
+
+The following paper details the development of the Chapman-Richards distribution &hellip;
+
+<ul style="list-style-type:none">
+  
+  <li>Gove, J. H., T. B. Lynch and M. J. Duecy. 2019. The Chapman-Richards Distribution
+    and its Relationship to the Generalized Beta.</a> <i>PLOS ONE</i> <b></b>:1-29;
+    (Submitted).
+  </li>
+
+</ul> 
+
+
+
+
+
+
+
+
+<!-- ============================================================================================== -->
+<h2><a name="Examples"></a>Mensuration examples</h2>
+
+
+<p>
+Several examples of the supporting functions are shown in the package vignette cited
+above. Because of the interavtive nature of Shiny applications, only a screen shot of each
+application is shown here. Again, a more detailed narrative on each application is found
+in the package vignette.
+</p>
+
+
+<h3><Rcode>qDistnShiny</Rcode></h3>
+
+<p> The following is a snapshot of the interface that allows one to invision
+  different <em>q</em> distibutions using the sliders to the left&hellip;
+</p>
+
+<!-- qDistnShiny -->
+<div id='qDistnShiny'>
+<!--<a href="https://r-forge.r-project.org/projects/mensuration/">-->
+<img src="./figures/qDistnShiny.png" width="100%"/> </a>
+</div>
+
+
+
+
+<h3><Rcode>crDistnShiny</Rcode></h3>
+
+<p> Similarly to the above, the following is a snapshot of the interface that allows one to invision
+  different Chapman-Richards distibutions using the sliders to the left; the following
+  shows a "rotated-sigmoid" distribution that is the default&hellip;
+</p>
+
+<!-- crDistnShiny -->
+<div id='crDistnShiny'>
+<!--<a href="https://r-forge.r-project.org/projects/mensuration/">-->
+<img src="./figures/crDistnShiny.png" width="100%"/> </a>
+</div>
+
+<p> Note that the sliders are used to set the parameters of the Chapman-Richards growth
+  equations (eta, m, and gamma) and the two other vital rates of the distribution:
+  Recruitment and Mmortality. 
+</p>
+
+<p>The above is accompanied by the basal area-size distribution on the right of the
+  figure. In the next figure, the distribution is the same, but we have clicked on the
+  "MortSurv" tab in the upper right, to show the survival probability and the mortality
+  distribution&hellip;
+</p>
+
+<!-- crDistnShiny With Mortality -->
+<div id='crDistnShiny'>
+<!--<a href="https://r-forge.r-project.org/projects/mensuration/">-->
+<img src="./figures/crDistnShinyWithMortality.png" width="100%"/> </a>
+</div>
+
+
+<p>Finally, the following is again the same distribution, but showing the stand table
+  view, much like what is shown by default in the <Rcode>qDistnShiny</Rcode> application&hellip;
+</p>
+
+<!-- crDistnShiny With Stand Table -->
+<div id='crDistnShiny'>
+<!--<a href="https://r-forge.r-project.org/projects/mensuration/">-->
+<img src="./figures/crDistnShinyWithST.png" width="100%"/> </a>
+</div>
+
+
+
+
+</div> <!-- #content -->
+
+<!-- ============================================================================================== -->
+
+
+   
+<div id="cleardiv"></div>
+
+<div id="footer">
+  <i>The examples in this page were generated using the very useful R
+  package <a href="http://yihui.name/knitr/"><Rpkg>knitr</Rpkg></a>.<br>  Last updated:
+  9-Oct-2018 (jhg)</i>
+</div>
+
+</body>
+</html>
