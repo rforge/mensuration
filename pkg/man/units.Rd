@@ -61,11 +61,15 @@ JHG
 }
 
 \examples{
+#
+# okay to run if you have GNU units installed...
+#
+\dontrun{
 Units(1,'m','ft')                              #simple conversion factor
 Units(c(25,50),'m^2/hectare','ft^2/acre')      #basal area quantities
 Units(c(250,500),'ft^3/acre','m^3/hectare')    #volume quantities
 Units(c(250,1,1),c('ft^3/acre','acre','hectare'),c('m^3/hectare','hectare','acre')) #mixture
-
+}
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
